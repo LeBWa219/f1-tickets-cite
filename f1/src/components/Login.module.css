@@ -1,0 +1,191 @@
+.pageContainer {
+  display: block;
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  background-image:
+    linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.8)),
+    url("/src/assets/bg-texture.png");
+  background-repeat: repeat;
+  padding-top: 80px;
+  background-color: #0b0b0b;
+}
+
+.loginCard {
+  display: block;
+  position: relative;
+  width: 600px;
+  margin: 0 auto;
+  background: #111111;
+  border: 1px solid #252525;
+  border-radius: 16px;
+  padding: 60px 50px;
+  text-align: center;
+}
+
+.logoContainer {
+  display: block;
+  font-family: "Formula1", sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.f1Red {
+  color: #e10600;
+}
+
+.title {
+  font-family: "Formula1", sans-serif;
+  color: #ffffff;
+  font-size: 32px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  color: #aaaaaa;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.switchLink {
+  color: #e10600;
+  cursor: pointer;
+}
+
+.form {
+  display: block;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  height: 54px;
+  background: #222222;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 0 20px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.input:focus {
+  border-color: #e10600;
+}
+
+.row {
+  display: block;
+  position: relative;
+  height: 24px;
+  margin-bottom: 30px;
+  color: #aaaaaa;
+  font-size: 14px;
+}
+
+.checkboxLabel {
+  float: left;
+  cursor: pointer;
+}
+
+.checkbox {
+  margin-right: 8px;
+  accent-color: #e10600;
+}
+
+.forgotPassword {
+  float: right;
+  color: #e10600;
+  cursor: pointer;
+}
+
+.submitBtn {
+  display: block;
+  width: 100%;
+  height: 54px;
+  background: #e10600;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.submitBtn:hover {
+  background: #b80500;
+}
+
+@media (max-width: 768px) {
+  .pageContainer {
+    padding-top: 40px;
+  }
+
+  .loginCard {
+    width: auto;
+    max-width: 500px;
+    margin: 0 20px;
+    padding: 40px 30px;
+  }
+
+  .logoContainer {
+    font-size: 30px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+  }
+
+  .checkboxLabel,
+  .forgotPassword {
+    float: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .loginCard {
+    margin: 0 15px;
+    padding: 30px 20px;
+  }
+
+  .logoContainer {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .subtitle {
+    margin-bottom: 30px;
+  }
+
+  .input,
+  .submitBtn {
+    height: 48px;
+    font-size: 15px;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .submitBtn {
+    font-size: 16px;
+  }
+}

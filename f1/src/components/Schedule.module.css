@@ -1,0 +1,137 @@
+.pageWrapper {
+  width: 100%;
+  padding: 60px 0 100px 0;
+  display: flex;
+  justify-content: center;
+  background-image:
+    linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.8)),
+    url("/src/assets/bg-texture.png");
+  background-repeat: repeat;
+  background-color: #0b0b0b;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 48px;
+}
+
+.titleBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.subtitle {
+  color: #e10600;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.pageTitle {
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
+.filterTabs {
+  display: flex;
+  gap: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 4px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tabBtn {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 16px;
+  transition: all 0.2s;
+}
+
+.tabBtn:hover {
+  color: #ffffff;
+}
+
+.activeTab {
+  background-color: #e10600;
+  color: #ffffff !important;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 1024px) {
+  .pageTitle {
+    font-size: 38px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pageWrapper {
+    padding: 40px 0 60px 0;
+  }
+
+  .headerRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+
+  .pageTitle {
+    font-size: 32px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageWrapper {
+    padding: 30px 0 40px 0;
+  }
+
+  .headerRow {
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .pageTitle {
+    font-size: 26px;
+  }
+
+  .filterTabs {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-radius: 12px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tabBtn {
+    padding: 8px 12px;
+  }
+}

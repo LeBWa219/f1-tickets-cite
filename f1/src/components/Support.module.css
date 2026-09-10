@@ -1,0 +1,393 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 80px;
+  background-color: #0c0c0e;
+  min-height: calc(100vh - 180px);
+  background-image:
+    linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.8)),
+    url("/src/assets/bg-texture.png");
+  background-repeat: repeat;
+  background-color: #0b0b0b;
+}
+
+.supportCard {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  background: #141416;
+  border: 1px solid #232329;
+  border-radius: 30px;
+  overflow: hidden;
+  height: 650px;
+}
+
+.chatSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #232329;
+}
+
+.qaSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionHeader {
+  background: #7c7c82;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px 0;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.chatBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  flex-grow: 1;
+  background: #0f0f11;
+}
+
+.messagesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+  flex-grow: 1;
+  padding-right: 10px;
+}
+
+.incomingMessageWrapper {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  background: #1c1c1e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #3a3a3c;
+}
+
+.avatarText {
+  color: #e10600;
+  font-weight: 700;
+  font-size: 11px;
+  font-style: italic;
+}
+
+.messageBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.incomingMessage {
+  background: #1c1c1e;
+  color: #ffffff;
+  padding: 14px 20px;
+  border-radius: 16px 16px 16px 4px;
+  font-size: 14px;
+  max-width: 320px;
+  border: 1px solid #2c2c2e;
+}
+
+.timeLabel {
+  color: #545456;
+  font-size: 11px;
+  margin-left: 4px;
+}
+
+.outgoingMessageWrapper {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.messageBlockRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.outgoingMessage {
+  background: #0084ff;
+  color: #ffffff;
+  padding: 14px 20px;
+  border-radius: 16px 16px 4px 16px;
+  font-size: 14px;
+  max-width: 320px;
+}
+
+.timeLabelRight {
+  color: #545456;
+  font-size: 11px;
+  margin-right: 4px;
+}
+
+.userAvatar {
+  width: 36px;
+  height: 36px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  position: relative;
+}
+
+.userAvatar::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 8px;
+  border: 2px solid #ffffff;
+  border-radius: 8px 8px 0 0;
+  bottom: 2px;
+  left: 8px;
+}
+
+.inputArea {
+  display: flex;
+  align-items: center;
+  background: #121214;
+  border: 1px solid #2c2c2e;
+  border-radius: 25px;
+  padding: 6px 12px;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.attachBtn {
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.attachBtn::before {
+  content: "📎";
+  color: #8e8e93;
+  font-size: 16px;
+  position: absolute;
+  top: -2px;
+  left: 0;
+}
+
+.emojiBtn {
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.emojiBtn::before {
+  content: "😊";
+  color: #8e8e93;
+  font-size: 16px;
+  position: absolute;
+  top: -2px;
+  left: 0;
+}
+
+.messageInput {
+  flex-grow: 1;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+}
+
+.messageInput::placeholder {
+  color: #545456;
+}
+
+.sendBtn {
+  width: 32px;
+  height: 32px;
+  background: #ffffff;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.sendBtn::after {
+  content: "➔";
+  color: #0f0f11;
+  font-size: 14px;
+}
+
+.qaBody {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow-y: auto;
+  background: #0f0f11;
+  flex-grow: 1;
+}
+
+.qaItem {
+  background: #1c1c1e;
+  border-radius: 12px;
+  padding: 18px;
+  border: 1px solid #2c2c2e;
+  transition: background 0.2s;
+}
+
+.qaItemActive {
+  background: #2c2c2e;
+}
+
+.qaQuestionRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.qaQuestion {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #ffffff;
+  transition: transform 0.2s;
+}
+
+.arrowUp {
+  transform: rotate(180deg);
+}
+
+.qaAnswer {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid #48484a;
+  color: #d1d1d6;
+  font-size: 14px;
+  line-height: 1.5;
+}
+@media (max-width: 1024px) {
+  .container {
+    padding: 40px;
+  }
+
+  .supportCard {
+    height: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 30px 20px;
+    min-height: auto;
+  }
+
+  .supportCard {
+    flex-direction: column;
+    height: auto;
+    border-radius: 20px;
+  }
+
+  .chatSection {
+    border-right: none;
+    border-bottom: 1px solid #232329;
+    height: 500px;
+  }
+
+  .qaSection {
+    height: auto;
+  }
+
+  .qaBody {
+    max-height: 400px;
+  }
+
+  .incomingMessage,
+  .outgoingMessage {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 20px 15px;
+  }
+
+  .sectionHeader {
+    font-size: 18px;
+    padding: 12px 0;
+  }
+
+  .chatBody,
+  .qaBody {
+    padding: 20px 15px;
+  }
+
+  .chatSection {
+    height: 450px;
+  }
+
+  .incomingMessage,
+  .outgoingMessage {
+    max-width: 85%;
+    font-size: 13px;
+    padding: 10px 16px;
+  }
+
+  .avatar,
+  .userAvatar {
+    width: 32px;
+    height: 32px;
+  }
+
+  .userAvatar::after {
+    width: 12px;
+    height: 6px;
+    bottom: 2px;
+    left: 7px;
+  }
+
+  .inputArea {
+    padding: 6px 10px;
+    margin-top: 15px;
+  }
+
+  .messageInput {
+    font-size: 13px;
+  }
+
+  .qaQuestion {
+    font-size: 14px;
+  }
+
+  .qaAnswer {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,565 @@
+.pageWrapper {
+  width: 100%;
+  padding: 60px 0 100px 0;
+  display: flex;
+  justify-content: center;
+  background-image:
+    linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.8)),
+    url("/src/assets/bg-texture.png");
+  background-repeat: repeat;
+  background-color: #0b0b0b;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.headerBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.subtitle {
+  color: #e10600;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.pageTitle {
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.stepper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  max-width: 400px;
+  margin: 0 auto 48px auto;
+}
+
+.stepItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.stepCircle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #222222;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.6);
+  transition: all 0.3s;
+}
+
+.stepActive {
+  background-color: #e10600;
+  border-color: #e10600;
+  color: #ffffff;
+}
+
+.stepLabel {
+  font-size: 10px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stepLine {
+  flex: 1;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+}
+
+.bookingGrid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.mainCard {
+  background-color: #111111;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 40px;
+}
+
+.summaryCard {
+  background-color: #111111;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 32px;
+}
+
+.cardSectionTitle {
+  font-size: 20px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.sectionIcon {
+  font-size: 18px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.inputLabel {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.selectInput,
+.textInput {
+  background-color: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 14px;
+  font-size: 14px;
+  font-family: inherit;
+  width: 100%;
+  outline: none;
+}
+
+.selectInput {
+  appearance: none;
+}
+
+.ticketOptionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ticketOptionCard {
+  background-color: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.ticketSelected {
+  border-color: #0044ff;
+  background-color: rgba(0, 68, 255, 0.02);
+}
+
+.hiddenRadio {
+  display: none;
+}
+
+.radioCustom {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ticketSelected .radioCustom {
+  border-color: #0044ff;
+}
+
+.radioInner {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.ticketSelected .radioInner {
+  background-color: #0044ff;
+}
+
+.ticketCardInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.ticketName {
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.ticketDesc {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.ticketPrice {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.counterBlock {
+  display: flex;
+  align-items: center;
+  background-color: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  width: fit-content;
+  overflow: hidden;
+}
+
+.counterBtn {
+  color: #ffffff;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.counterBtn:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.counterValue {
+  padding: 0 16px;
+  font-size: 14px;
+  font-weight: 700;
+  min-width: 40px;
+  text-align: center;
+}
+
+.actionRowRight {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 32px;
+}
+
+.actionRowBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.nextBtn {
+  background-color: #e10600;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 14px 28px;
+  border-radius: 6px;
+}
+
+.backLink {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.backLink:hover {
+  color: #ffffff;
+}
+
+.rowInputs {
+  display: flex;
+  gap: 16px;
+}
+
+.summaryTitle {
+  font-size: 18px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 16px;
+}
+
+.summaryBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.summaryLabel {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.summaryValueText {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.summarySubtext {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.summaryFlexRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.summaryDivider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 24px 0 16px 0;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.totalLabel {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.totalPrice {
+  font-size: 24px;
+  font-weight: 800;
+  color: #e10600;
+}
+
+.successCard {
+  background-color: #111111;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.successCheckCircle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgba(10, 150, 60, 0.15);
+  border: 2px solid #0a963c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.checkIcon {
+  font-size: 42px;
+  color: #0a963c;
+  font-weight: bold;
+}
+
+.successTitle {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.successText {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.highlightEmail {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.successHomeBtn {
+  background-color: #e10600;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 14px;
+  width: 100%;
+  max-width: 280px;
+  padding: 16px 0;
+  border-radius: 8px;
+  letter-spacing: 0.5px;
+}
+@media (max-width: 1024px) {
+  .pageTitle {
+    font-size: 38px;
+  }
+
+  .bookingGrid {
+    grid-template-columns: 1.4fr 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pageWrapper {
+    padding: 40px 0 60px 0;
+  }
+
+  .pageTitle {
+    font-size: 32px;
+  }
+
+  .stepper {
+    margin-bottom: 36px;
+  }
+
+  .bookingGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .mainCard {
+    padding: 30px;
+  }
+
+  .summaryCard {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageWrapper {
+    padding: 30px 0 40px 0;
+  }
+
+  .headerBlock {
+    margin-bottom: 24px;
+  }
+
+  .pageTitle {
+    font-size: 24px;
+  }
+
+  .stepper {
+    gap: 10px;
+    margin-bottom: 32px;
+  }
+
+  .stepCircle {
+    width: 32px;
+    height: 32px;
+    font-size: 11px;
+  }
+
+  .stepLine {
+    margin-bottom: 18px;
+  }
+
+  .mainCard,
+  .summaryCard {
+    padding: 20px 16px;
+    border-radius: 12px;
+  }
+
+  .cardSectionTitle {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .rowInputs {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .ticketOptionCard {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .ticketName {
+    font-size: 14px;
+  }
+
+  .ticketDesc {
+    font-size: 11px;
+  }
+
+  .ticketPrice {
+    font-size: 14px;
+  }
+
+  .actionRowBetween {
+    flex-direction: column-reverse;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .nextBtn {
+    width: 100%;
+    text-align: center;
+    padding: 14px 0;
+  }
+
+  .totalPrice {
+    font-size: 20px;
+  }
+
+  .successCard {
+    padding: 40px 20px;
+    border-radius: 12px;
+  }
+
+  .successCheckCircle {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 24px;
+  }
+
+  .checkIcon {
+    font-size: 34px;
+  }
+
+  .successTitle {
+    font-size: 20px;
+  }
+
+  .successText {
+    font-size: 13px;
+    margin-bottom: 30px;
+  }
+}

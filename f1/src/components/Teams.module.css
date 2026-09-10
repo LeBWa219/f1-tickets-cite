@@ -1,0 +1,227 @@
+.pageWrapper {
+  width: 100%;
+  padding: 60px 0 100px 0;
+  display: flex;
+  justify-content: center;
+  background-image:
+    linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.8)),
+    url("/src/assets/bg-texture.png");
+  background-repeat: repeat;
+  background-color: #0b0b0b;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.headerBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 48px;
+}
+
+.subtitle {
+  color: #e10600;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.pageTitle {
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background-color: #111111;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  position: relative;
+  height: 260px;
+}
+
+.colorBorder {
+  width: 6px;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.cardContent {
+  flex: 1;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.teamName {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.teamCode {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 700;
+}
+
+.cupIconContainer {
+  background-color: rgba(255, 255, 255, 0.05);
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cupIcon {
+  font-size: 16px;
+  opacity: 0.7;
+}
+
+.driversBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.driversTitle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.driversIcon {
+  font-size: 10px;
+}
+
+.driversList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.driverName {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-top: auto;
+  margin-bottom: 16px;
+}
+
+.pointsBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pointsLabel {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.pointsValue {
+  font-size: 20px;
+  font-weight: 800;
+}
+@media (max-width: 1024px) {
+  .pageTitle {
+    font-size: 38px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pageWrapper {
+    padding: 40px 0 60px 0;
+  }
+
+  .headerBlock {
+    margin-bottom: 32px;
+  }
+
+  .pageTitle {
+    font-size: 32px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .card {
+    height: auto;
+    min-height: 240px;
+  }
+
+  .divider {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageWrapper {
+    padding: 30px 0 40px 0;
+  }
+
+  .headerBlock {
+    margin-bottom: 24px;
+  }
+
+  .pageTitle {
+    font-size: 26px;
+  }
+
+  .cardContent {
+    padding: 18px;
+  }
+
+  .cardHeader {
+    margin-bottom: 16px;
+  }
+
+  .teamName {
+    font-size: 18px;
+  }
+
+  .pointsValue {
+    font-size: 18px;
+  }
+}

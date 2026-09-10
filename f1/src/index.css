@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+
+  background-color: #0b0b0b;
+  color: #ffffff;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+input[type="password"]::-webkit-credentials-filter-button,
+input[type="password"]::-webkit-contacts-auto-fill-button,
+input[type="password"]::-ms-reveal,
+input[type="password"]::-webkit-password-toggle-toggle-button {
+  filter: invert(1) !important;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+input[type="password"]::-webkit-password-toggle-toggle-button:hover,
+input[type="password"]::-ms-reveal:hover {
+  opacity: 1;
+}
+@media (max-width: 1024px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  button,
+  a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}

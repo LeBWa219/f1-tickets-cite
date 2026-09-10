@@ -1,0 +1,458 @@
+.adminWrapper {
+  display: flex;
+  min-height: calc(100vh - 80px);
+  background-image:
+    linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.8)),
+    url("/src/assets/bg-texture.png");
+  background-repeat: repeat;
+  color: #ffffff;
+  font-family: sans-serif;
+}
+
+.sidebar {
+  background-color: #141414f0;
+  min-height: 100vh;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32px 24px;
+  box-sizing: border-box;
+}
+
+.sidebarTop {
+  width: 100%;
+}
+
+.adminTitle {
+  font-size: 22px;
+  font-weight: 800;
+  padding: 0 25px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoAccent {
+  color: #ff2a24;
+}
+
+.menuList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menuItem {
+  padding: 20px 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  color: #a5a5b2;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.menuItem:hover {
+  background-color: rgba(255, 42, 36, 0.05);
+  color: #ffffff;
+}
+
+.activeItem {
+  background-color: rgba(255, 42, 36, 0.1);
+  color: #ff2a24;
+  border-left: 4px solid #ff2a24;
+  padding-left: 21px;
+}
+
+.logoutBtn:hover {
+  color: #ff2a24;
+}
+
+.contentArea {
+  flex: 1;
+  padding: 40px;
+  box-sizing: border-box;
+  background-color: #0b0b0b;
+}
+
+.panelCard {
+  background-color: #141414;
+  border-radius: 16px;
+  border: 1px solid #1f1f2e;
+  padding: 30px;
+}
+
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.panelTitle {
+  font-size: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.addBtn {
+  background-color: #ff2a24;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.addBtn:hover {
+  background-color: #d61f1a;
+}
+
+.adminTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.adminTable th {
+  color: #a5a5b2;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 15px 10px;
+  border-bottom: 1px solid #1f1f2e;
+}
+
+.adminTable td {
+  padding: 20px 10px;
+  border-bottom: 1px solid #1f1f2e;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.actionCell {
+  display: flex;
+  gap: 15px;
+}
+
+.editIcon,
+.deleteIcon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.editIcon {
+  color: #3b82f6;
+}
+.deleteIcon {
+  color: #ef4444;
+}
+
+.formGroupRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.formGroup label {
+  font-size: 12px;
+  color: #a5a5b2;
+}
+
+.formGroup input,
+.formGroup textarea {
+  background-color: #1a1a1a;
+  border: 1px solid #2a2a3a;
+  border-radius: 8px;
+  padding: 12px;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.formGroup textarea {
+  height: 150px;
+  resize: none;
+}
+
+.saveBtn {
+  background-color: #ff2a24;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  float: right;
+}
+
+.chatContainer {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #1f1f2e;
+  height: 600px;
+}
+
+.chatMain {
+  background-color: #141414;
+  display: flex;
+  flex-direction: column;
+}
+
+.chatHeader {
+  background-color: #a5a5b2;
+  color: #141414;
+  padding: 15px 25px;
+  font-weight: 800;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.chatListHeader {
+  background-color: #a5a5b2;
+  color: #141414;
+  padding: 15px 25px;
+  font-weight: 800;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-left: 1px solid #141414;
+}
+
+.messagesArea {
+  flex: 1;
+  padding: 25px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.msgRow {
+  display: flex;
+  width: 100%;
+}
+
+.msgRowAdmin {
+  justify-content: flex-end;
+}
+.msgRowUser {
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.userAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #2a2a3a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.msgBubble {
+  max-width: 60%;
+  padding: 12px 18px;
+  font-size: 14px;
+  position: relative;
+}
+
+.msgAdmin {
+  background-color: #1a1a1a;
+  border: 1px solid #ffffff;
+  border-radius: 16px 16px 0 16px;
+  color: #ffffff;
+}
+
+.msgUser {
+  background-color: #1d90f3;
+  border-radius: 16px 16px 16px 0;
+  color: #ffffff;
+}
+
+.msgTime {
+  font-size: 10px;
+  color: #a5a5b2;
+  margin-top: 4px;
+  display: block;
+}
+
+.inputBar {
+  padding: 20px;
+  border-top: 1px solid #1f1f2e;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.inputWrapper {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #141414;
+  border: 1px solid #2a2a3a;
+  border-radius: 25px;
+  padding: 0 15px;
+}
+
+.inputWrapper input {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 12px 5px;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.inputWrapper input:focus {
+  outline: none;
+}
+
+.iconBtn {
+  background: none;
+  border: none;
+  color: #a5a5b2;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.sendBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #141414;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.sidebarChats {
+  background-color: #111111;
+  border-left: 1px solid #1f1f2e;
+  overflow-y: auto;
+}
+
+.chatItem {
+  padding: 20px;
+  border-bottom: 1px solid #1f1f2e;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatItem:hover {
+  background-color: #1a1a1a;
+}
+.chatItemActive {
+  background-color: #1a1a1a;
+}
+
+.chatMeta h4 {
+  margin: 0 0 5px 0;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.chatMeta p {
+  margin: 0;
+  font-size: 12px;
+  color: #a5a5b2;
+}
+
+.badgeCount {
+  background-color: #1d90f3;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: bold;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .adminWrapper {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    min-height: auto;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .contentArea {
+    padding: 20px;
+  }
+
+  .chatContainer {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .sidebarChats {
+    border-left: none;
+    border-top: 1px solid #1f1f2e;
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .adminTitle {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  .menuItem {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .panelCard {
+    padding: 15px;
+  }
+
+  .formGroupRow {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .msgBubble {
+    max-width: 85%;
+  }
+
+  .adminTable {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}

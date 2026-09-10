@@ -1,0 +1,236 @@
+.siteHeader {
+  background-color: #15151c;
+  border-bottom: 1px solid #252530;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+.headerContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.logoBlock {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.f1Logo {
+  background-color: #e10600;
+  color: #ffffff;
+  font-weight: 900;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-style: italic;
+  font-size: 16px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.hubText {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.menuMobile {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navigation {
+  display: flex;
+  gap: 25px;
+}
+
+.navLink,
+.navLinkActive {
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  padding: 10px 0;
+  transition: color 0.2s ease;
+  position: relative;
+  white-space: nowrap;
+}
+
+.navLink {
+  color: #a5a5b2;
+}
+
+.navLink:hover,
+.navLinkActive {
+  color: #ffffff;
+}
+
+.navLinkActive::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #e10600;
+}
+
+.authActions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.supportLink,
+.supportLinkActive {
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+  background: none;
+  border: none;
+}
+
+.supportLink {
+  color: #8e8e93;
+}
+
+.supportLink:hover,
+.supportLinkActive {
+  color: #ffffff;
+}
+
+.loginBtn {
+  background: none;
+  border: 1px solid #333345;
+  border-radius: 6px;
+  color: #ffffff;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.loginBtn:hover {
+  background-color: #1f1f2e;
+  border-color: #e10600;
+}
+
+.burgerBtn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 110;
+  flex-shrink: 0;
+}
+
+.burgerLine {
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+@media (max-width: 1150px) {
+  .burgerBtn {
+    display: flex;
+  }
+
+  .burgerBtn.burgerActive .burgerLine:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .burgerBtn.burgerActive .burgerLine:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burgerBtn.burgerActive .burgerLine:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .menuMobile {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #15151c;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    padding: 40px;
+    transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 100;
+    box-sizing: border-box;
+  }
+
+  .menuMobile.menuActive {
+    right: 0;
+  }
+
+  .navigation {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+  }
+
+  .navLink,
+  .navLinkActive {
+    font-size: 18px;
+    padding: 8px 0;
+  }
+
+  .authActions {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    border-top: 1px solid #252530;
+    padding-top: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .headerContainer {
+    padding: 0 16px;
+  }
+
+  .f1Logo {
+    font-size: 14px;
+    padding: 2px 6px;
+  }
+
+  .hubText {
+    font-size: 14px;
+  }
+}
